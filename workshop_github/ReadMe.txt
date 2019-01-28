@@ -1,19 +1,17 @@
-Copyright © 2017 by Mohamed W. Mehrez
+Copyright Â© 2017 by Mohamed W. Mehrez
 All rights reserved. 
 
-https://sites.google.com/view/mwmehrez
-
-
+personal website: https://sites.google.com/view/mwmehrez
+e-mail: m.mehrez.said@gmail.com
 
 This folder contains the presentation material and codes used in 
-the MPC workshop taken place at the faculty of Engineering, Ain Shams University.
+the MPC workshop taken place at the faculty of Engineering, University of Waterloo, on the 24th and the 25th of January, 2019.
 
 The contents of the folder are:
-1- A handout of the presentation.
-2- matlab codes of all the examples shown.
+1- The presentation slides.
+2- MATLAB codes of all the examples shown.
 
-Before running the codes, make sure that casadi package is properly installed.
+Before running the codes, make sure that casadi package is properly installed and added to the matlab path. 
 you can download casadi from here https://web.casadi.org/get/
 
-please message me incase you have any questions
-e-mail: m.mehrez.said@gmail.com
+please message me in case you have any questions
