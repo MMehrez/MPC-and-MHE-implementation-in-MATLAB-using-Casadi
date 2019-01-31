@@ -4,6 +4,10 @@ All rights reserved.
 personal website: https://sites.google.com/view/mwmehrez
 e-mail: m.mehrez.said@gmail.com
 
+If you use the codes, please cite any of my related articles.
+you can find my articles on google scholar here
+https://scholar.google.ca/citations?user=aRNeH4QAAAAJ&hl=en
+
 This folder contains the presentation material and codes used in 
 the MPC workshop taken place at the faculty of Engineering, University of Waterloo, on the 24th and the 25th of January, 2019.
 
