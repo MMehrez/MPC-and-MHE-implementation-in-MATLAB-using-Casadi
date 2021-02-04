@@ -4,6 +4,7 @@ This is a Python implementation for model predictive control (MPC) ported from t
 
 The implementation uses the Casadi Python Package for numerical optimization and {numpy + matplotlib} for visualization. 
 A holonomic mobile robot (Mecanum wheeled omnnidirectional mobile robot (MWOMR)) is used as a system for the implementation. 
+A helpful paper explaining the transfer function: [link from researchgate.net](https://www.researchgate.net/publication/334319114_Model_Predictive_Control_for_a_Mecanum-wheeled_robot_in_Dynamical_Environments)
 
 
 Casadi can be downloaded here https://web.casadi.org/

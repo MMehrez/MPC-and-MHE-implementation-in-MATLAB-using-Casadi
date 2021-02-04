@@ -96,7 +96,8 @@ rot_3d_z = ca.vertcat(
     ca.horzcat(sin(theta),  cos(theta), 0),
     ca.horzcat(         0,           0, 1)
 )
-
+# Mecanum wheel transfer function which can be found here: 
+# https://www.researchgate.net/publication/334319114_Model_Predictive_Control_for_a_Mecanum-wheeled_robot_in_Dynamical_Environments
 J = (wheel_radius/4) * ca.DM([
     [         1,         1,          1,         1],
     [        -1,         1,          1,        -1],
@@ -106,21 +107,13 @@ J = (wheel_radius/4) * ca.DM([
 RHS = rot_3d_z @ J @ controls
 # maps controls from [va, vb, vc, vd].T to [vx, vy, omega].T
 f = ca.Function('f', [states, controls], [RHS])
-# TODO: move Runge Kutta here and vectorize it
 
 
 cost_fn = 0  # cost function
 g = X[:, 0] - P[:n_states]  # constraints in the equation
 
-# check dimensions
-#print('st '+st.dim()+'\n')
-#print('R '+R.dim()+'\n')
-#print('Q '+Q.dim()+'\n')
-#print('P '+P.dim()+'\n')
-#print('P_n '+P[n_states:].dim()+'\n')
 
 # runge kutta
-# TODO: replace runge kuta loop with "mapaccum"
 for k in range(N):
     st = X[:, k]
     con = U[:, k]
@@ -269,4 +262,4 @@ if __name__ == '__main__':
 
     # simulate
     simulate(cat_states, cat_controls, times, step_horizon, N,
-             np.array([x_init, y_init, theta_init, x_target, y_target, theta_target]), save=True)
+             np.array([x_init, y_init, theta_init, x_target, y_target, theta_target]), save=False)
